@@ -7,7 +7,9 @@ on:
 jobs:
   CodeQL-Build:
     runs-on: ubuntu-latest
-
+    strategy:      
+      matrix:
+        language: ['javascript', 'python']
     permissions:
       # required for all workflows
       security-events: write
